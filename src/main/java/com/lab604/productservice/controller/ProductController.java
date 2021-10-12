@@ -18,12 +18,12 @@ public class ProductController {
     ProductRepository productRepository;
 
     @GetMapping
-    public List<Product> getProducts(){
+    public List<Product> getProducts() {
         return productRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Product findById(@PathVariable("id") Long id){
+    public Product findById(@PathVariable("id") Long id) {
         return productRepository.findById(id).get();
     }
 }
